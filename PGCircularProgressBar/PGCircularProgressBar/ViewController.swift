@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        levels.selectedSegmentIndex = UISegmentedControl.noSegment
         let progressBarConfiguration = ProgressBarConfiguration<ProgressBarParameters, Any>(resolver: { (type) -> Any in
             switch type {
             case .attributedString:

@@ -25,6 +25,7 @@
                                     <segment title="High"/>
                                     <segment title="VHigh"/>
                                 </segments>
+                                <color key="tintColor" red="0.013543169109999999" green="0.10208420949999999" blue="0.72200858160000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="levelIndex:" destination="BYZ-38-t0r" eventType="valueChanged" id="YST-Kc-EsJ"/>
                                 </connections>
