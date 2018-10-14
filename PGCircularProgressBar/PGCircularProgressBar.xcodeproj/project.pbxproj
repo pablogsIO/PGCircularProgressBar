@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E9114AE216D4225008B95CB /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9114AD216D4224008B95CB /* Gradient.swift */; };
+		6ECBCB902173C03A002166EC /* ProgressBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECBCB8F2173C03A002166EC /* ProgressBarConfiguration.swift */; };
 		6EF94C5621655C4500860004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF94C5521655C4500860004 /* AppDelegate.swift */; };
 		6EF94C5821655C4500860004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF94C5721655C4500860004 /* ViewController.swift */; };
 		6EF94C5B21655C4500860004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF94C5921655C4500860004 /* Main.storyboard */; };
 		6EF94C5D21655C4700860004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF94C5C21655C4700860004 /* Assets.xcassets */; };
 		6EF94C6021655C4700860004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EF94C5E21655C4700860004 /* LaunchScreen.storyboard */; };
+		6EF94C6921655CAA00860004 /* PGCircularProgessBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF94C6821655CAA00860004 /* PGCircularProgessBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E9114AD216D4224008B95CB /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		6ECBCB8F2173C03A002166EC /* ProgressBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarConfiguration.swift; sourceTree = "<group>"; };
 		6EF94C5221655C4500860004 /* PGCircularProgressBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGCircularProgressBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF94C5521655C4500860004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EF94C5721655C4500860004 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		6EF94C5C21655C4700860004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EF94C5F21655C4700860004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EF94C6121655C4700860004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EF94C6821655CAA00860004 /* PGCircularProgessBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGCircularProgessBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		6EF94C5421655C4500860004 /* PGCircularProgressBar */ = {
 			isa = PBXGroup;
 			children = (
+				6EF94C6721655C8200860004 /* Source */,
 				6EF94C5521655C4500860004 /* AppDelegate.swift */,
 				6EF94C5721655C4500860004 /* ViewController.swift */,
+				6E9114AD216D4224008B95CB /* Gradient.swift */,
 				6EF94C5921655C4500860004 /* Main.storyboard */,
 				6EF94C5C21655C4700860004 /* Assets.xcassets */,
 				6EF94C5E21655C4700860004 /* LaunchScreen.storyboard */,
 				6EF94C6121655C4700860004 /* Info.plist */,
 			);
 			path = PGCircularProgressBar;
+			sourceTree = "<group>";
+		};
+		6EF94C6721655C8200860004 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6EF94C6821655CAA00860004 /* PGCircularProgessBar.swift */,
+				6ECBCB8F2173C03A002166EC /* ProgressBarConfiguration.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +91,7 @@
 				6EF94C4E21655C4500860004 /* Sources */,
 				6EF94C4F21655C4500860004 /* Frameworks */,
 				6EF94C5021655C4500860004 /* Resources */,
+				6EF94C6A21655CF400860004 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,13 +148,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6EF94C6A21655CF400860004 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6EF94C4E21655C4500860004 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6EF94C5821655C4500860004 /* ViewController.swift in Sources */,
+				6ECBCB902173C03A002166EC /* ProgressBarConfiguration.swift in Sources */,
 				6EF94C5621655C4500860004 /* AppDelegate.swift in Sources */,
+				6EF94C6921655CAA00860004 /* PGCircularProgessBar.swift in Sources */,
+				6E9114AE216D4225008B95CB /* Gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
