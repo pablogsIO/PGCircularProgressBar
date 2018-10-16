@@ -93,7 +93,6 @@ class PGCircularProgressBar: UIView {
         self.layer.addSublayer(baseShape)
         self.layer.addSublayer(gradientLayer)
 
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGesture)))
     }
 
     public func setProgressBarLevel( level: ProgressBarLevel) {
@@ -115,20 +114,6 @@ class PGCircularProgressBar: UIView {
         let drawProgressAnimation = CABasicAnimation(keyPath: "strokeEnd")
 
         drawProgressAnimation.toValue = value
-        drawProgressAnimation.duration = 2
-        drawProgressAnimation.fillMode = .forwards
-        drawProgressAnimation.isRemovedOnCompletion = false
-        shapeLayer.add(drawProgressAnimation, forKey: "test")
-    }
-
-    @objc
-    private func tapGesture() {
-
-        shapeLayer.path = bezierPath?.cgPath
-
-        let drawProgressAnimation = CABasicAnimation(keyPath: "strokeEnd")
-
-        drawProgressAnimation.toValue = 1
         drawProgressAnimation.duration = 2
         drawProgressAnimation.fillMode = .forwards
         drawProgressAnimation.isRemovedOnCompletion = false
